@@ -13,11 +13,6 @@ void initRFIDController() {
   Serial.println("RFID: Inicializando controlador...");
   mfrc522.PCD_Init();
   delay(4);
-  if (mfrc522.PCD_PerformSelfTest()) {
-    Serial.println("RFID: Autoteste concluído com sucesso.");
-  } else {
-    Serial.println("RFID: ERRO NO AUTOTESTE! Verifique a fiação e a alimentação.");
-  }
   mfrc522.PCD_DumpVersionToSerial();
   Serial.println("RFID: Leitor MFRC522 inicializado.");
 }
